@@ -33,14 +33,14 @@ const OurStore = () => {
                                 <h5 className="sub-title">Availability</h5>
                                 <div>
                                     <div className="form-check">
-                                        <input className="form-check-input" type="checkbox" defaultValue id />
-                                        <label className="form-check-label" htmlFor>
+                                        <input className="form-check-input" type="checkbox" defaultValue id="" />
+                                        <label className="form-check-label" htmlFor="true">
                                             In Stock (1)
                                         </label>
                                     </div>
                                     <div className="form-check">
-                                        <input className="form-check-input" type="checkbox" defaultValue id />
-                                        <label className="form-check-label" htmlFor>
+                                        <input className="form-check-input" type="checkbox" defaultValue id="" />
+                                        <label className="form-check-label" htmlFor="true">
                                             Out of Stock (0)
                                         </label>
                                     </div>
@@ -131,11 +131,14 @@ const OurStore = () => {
                                     <p className="mb-0 d-block" style={{ width: "100px" }}>
                                         Sort by:
                                     </p>
-                                    <select name="" className="form-control form-select" id="">
+                                    <select
+                                        name=""
+                                        defaultValue={"best-selling"}
+                                        className="form-control form-select"
+                                        id=""
+                                    >
                                         <option value="manual">Featured</option>
-                                        <option value="best-selling" selected="selected">
-                                            Best selling
-                                        </option>
+                                        <option value="best-selling">Best selling</option>
                                         <option value="title-ascending">Alphabetically, A-Z</option>
                                         <option value="title-descending">Alphabetically, Z-A</option>
                                         <option value="price-descending">Price, low to high</option>
@@ -183,7 +186,7 @@ const OurStore = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className="products-list pb-5 ">
+                        <div className="products-list pb-5">
                             <div className="d-flex gap-10 flex-wrap">
                                 <ProductCard grid={grid} />
                             </div>
